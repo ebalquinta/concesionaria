@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+
+  <h2>Concesionaria</h2>
+  <p>Lo de Traico</p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container col-md-4 col-sm-12">
+        <h3>Vehículo</h3>
+        <label for="tipo">Tipo</label>
+        <select type="text" id="tipo" name="">
+          <option value="Auto">Auto</option>
+          <option value="Camioneta">Camioneta</option>
+        </select>
+        <label for="patente">Patente</label>
+        <input type="text" id="patente" name="patente" placeholder="ABC123">
+        <label for="marca"> Marca</label>
+        <input type="text" id="marca" name="marca" placeholder="Toyota">
+        <label for="modelo">Modelo</label>
+        <input type="text" id="modelo" name="modelo" placeholder="Hilux">
+        <label for="anio">Año</label>
+        <input type="text" id="anio" name="anio" placeholder="2019">
+
+        <div class="row">
+          <div class="col-50">
+            <label for="precio">Precio</label>
+            <input type="text" id="precio" name="precio" placeholder="$100000">
+          </div>
+          <div class="col-50">
+            <label for="capacidad">Capacidad</label>
+            <input type="text" id="capacidad" name="capacidad" placeholder="1000">
+          </div>
+        </div>
+        <input type="submit" value="Agregar" id="btnAgregar" class="btn">
+        <input type="submit" value="Guardar Cambios" id="btnGuardar" disabled="true" class="btn">
+        </form>
+      </div>
+
+      <div class="col-md-8 col-sm-12">
+        <div class="container">
+          <h4>
+            <button type="button" id="btnVehiculos">Vehículos</button>
+            <button type="button" id="btnAutos">Autos</button>
+            <button type="button" id="btnCamionetas">Camionetas</button>
+            <input type="text" id="buscarPatente" name="patente" placeholder="ABC123">
+            <button type="button" id="btnBuscarPatente">Consultar</button>
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover table-sm">
+              <thead class="thead-dark">
+                <th>Patente</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Precio</th>
+                <th>Capacidad</th>
+                <th>Acciones</th>
+              </thead>
+              <tbody id="tblVehiculos"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.4.0.js"></script>
+
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/concesionaria.js"></script>
+</body>
+
+</html>
